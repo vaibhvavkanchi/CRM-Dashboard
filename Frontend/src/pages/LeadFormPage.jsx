@@ -120,10 +120,14 @@ export default function LeadFormPage({ mode }) {
 
       if (mode === "edit") {
         await leadService.update(id, payload);
-        toast.success("Lead updated successfully");
+        toast.success("Lead updated successfully", {
+          id: "Lead updated successfully",
+        });
       } else {
         await leadService.create(payload);
-        toast.success("Lead created successfully");
+        toast.success("Lead created successfully", {
+          id: "Lead created successfully",
+        });
       }
 
       navigate("/leads");

@@ -89,7 +89,13 @@ export default function DashboardPage() {
       <Grid2 container spacing={3}>
         <Grid2 size={{ xs: 12, md: 4 }}>
           {loading ? (
-            <Skeleton variant="rounded" height={130} />
+            <GlassCard sx={{ height: "100%" }}>
+              <CardContent>
+                <Skeleton variant="text" width={140} />
+                <Skeleton variant="text" width={100} sx={{ fontSize: 32 }} />
+                <Skeleton variant="text" width={180} />
+              </CardContent>
+            </GlassCard>
           ) : (
             <StatCard
               title="Total Leads"
@@ -101,7 +107,13 @@ export default function DashboardPage() {
         {statusData.slice(0, 2).map((item) => (
           <Grid2 key={item.name} size={{ xs: 12, md: 4 }}>
             {loading ? (
-              <Skeleton variant="rounded" height={130} />
+              <GlassCard sx={{ height: "100%" }}>
+                <CardContent>
+                  <Skeleton variant="text" width={140} />
+                  <Skeleton variant="text" width={100} sx={{ fontSize: 32 }} />
+                  <Skeleton variant="text" width={180} />
+                </CardContent>
+              </GlassCard>
             ) : (
               <StatCard
                 title={`Status: ${item.name}`}

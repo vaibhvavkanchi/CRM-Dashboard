@@ -143,7 +143,7 @@ export default function LeadsPage() {
             <Tooltip title="View">
               <IconButton
                 size="small"
-                color="primary"
+                color="secondary"
                 onClick={() => navigate(`/leads/${params.row._id}/edit`)}
               >
                 <VisibilityIcon fontSize="small" />
@@ -154,7 +154,7 @@ export default function LeadsPage() {
                 <Tooltip title="Edit">
                   <IconButton
                     size="small"
-                    color="primary"
+                    color="secondary"
                     onClick={() => navigate(`/leads/${params.row._id}/edit`)}
                   >
                     <EditIcon fontSize="small" />

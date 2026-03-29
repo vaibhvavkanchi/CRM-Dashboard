@@ -8,7 +8,6 @@ import {
   useState,
 } from "react";
 import { io } from "socket.io-client";
-import toast from "react-hot-toast";
 import useAuth from "../hooks/useAuth";
 import notificationService from "../services/notificationService";
 
@@ -55,7 +54,6 @@ export function NotificationProvider({ children }) {
     setNotifications((current) =>
       current.map((item) => ({ ...item, isRead: true })),
     );
-    toast.success("All notifications marked as read");
   }, []);
 
   useEffect(() => {
@@ -76,7 +74,6 @@ export function NotificationProvider({ children }) {
     socket.on("notification:new", (payload) => {
       setNotifications((current) => [payload, ...current]);
       setPagination((current) => ({ ...current, total: current.total + 1 }));
-      toast.success(payload.message);
     });
 
     socketRef.current = socket;
