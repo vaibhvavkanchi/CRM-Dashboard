@@ -127,12 +127,20 @@ export default function DashboardPage() {
         <Grid2 size={{ xs: 12, lg: 6 }}>
           <GlassCard sx={{ height: "100%" }}>
             <CardContent>
-              <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
-                Leads by Status
-              </Typography>
               {loading ? (
-                <Skeleton variant="rounded" height={320} />
+                <>
+                  <Skeleton
+                    variant="text"
+                    width={160}
+                    sx={{ mb: 2, fontSize: 24 }}
+                  />
+                  <Skeleton variant="rounded" height={320} />
+                </>
               ) : (
+                <>
+                  <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
+                    Leads by Status
+                  </Typography>
                 <ResponsiveContainer width="100%" height={320}>
                   <BarChart data={statusData}>
                     <CartesianGrid strokeDasharray="3 3" />
@@ -142,6 +150,7 @@ export default function DashboardPage() {
                     <Bar dataKey="value" fill="#1976d2" radius={[8, 8, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>
+                </>
               )}
             </CardContent>
           </GlassCard>
@@ -149,12 +158,20 @@ export default function DashboardPage() {
         <Grid2 size={{ xs: 12, lg: 6 }}>
           <GlassCard sx={{ height: "100%" }}>
             <CardContent>
-              <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
-                Leads by Source
-              </Typography>
               {loading ? (
-                <Skeleton variant="rounded" height={320} />
+                <>
+                  <Skeleton
+                    variant="text"
+                    width={160}
+                    sx={{ mb: 2, fontSize: 24 }}
+                  />
+                  <Skeleton variant="rounded" height={320} />
+                </>
               ) : (
+                <>
+                  <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
+                    Leads by Source
+                  </Typography>
                 <Stack alignItems="center">
                   <ResponsiveContainer width="100%" height={320}>
                     <PieChart>
@@ -176,6 +193,7 @@ export default function DashboardPage() {
                     </PieChart>
                   </ResponsiveContainer>
                 </Stack>
+                </>
               )}
             </CardContent>
           </GlassCard>
