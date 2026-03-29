@@ -71,7 +71,7 @@ export default function NotificationDrawer() {
                   <ListItemButton
                     onClick={() => markRead(notification._id)}
                     sx={{
-                      borderRadius: 3,
+                      borderRadius: 1,
                       background: notification.isRead
                         ? "rgba(255,255,255,0.04)"
                         : "rgba(139,92,246,0.14)",
