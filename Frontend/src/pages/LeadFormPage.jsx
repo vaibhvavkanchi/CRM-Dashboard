@@ -182,6 +182,18 @@ export default function LeadFormPage({ mode }) {
                   select
                   fullWidth
                   label="Source"
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      height: 56,
+                    },
+                    "& .MuiSelect-select": {
+                      height: "100%",
+                      display: "flex",
+                      alignItems: "center",
+                      paddingTop: 0,
+                      paddingBottom: 0,
+                    },
+                  }}
                   value={form.source}
                   onChange={(e) =>
                     setForm((c) => ({ ...c, source: e.target.value }))
@@ -199,6 +211,18 @@ export default function LeadFormPage({ mode }) {
                   select
                   fullWidth
                   label="Status"
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      height: 56,
+                    },
+                    "& .MuiSelect-select": {
+                      height: "100%",
+                      display: "flex",
+                      alignItems: "center",
+                      paddingTop: 0,
+                      paddingBottom: 0,
+                    },
+                  }}
                   value={form.status}
                   onChange={(e) =>
                     setForm((c) => ({ ...c, status: e.target.value }))
@@ -217,6 +241,18 @@ export default function LeadFormPage({ mode }) {
                     select
                     fullWidth
                     label="Assign To"
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        height: 56,
+                      },
+                      "& .MuiSelect-select": {
+                        height: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        paddingTop: 0,
+                        paddingBottom: 0,
+                      },
+                    }}
                     value={form.assignedTo}
                     onChange={(e) =>
                       setForm((c) => ({ ...c, assignedTo: e.target.value }))

@@ -200,6 +200,18 @@ export default function LeadsPage() {
                 select
                 fullWidth
                 label="Status"
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    height: 56,
+                  },
+                  "& .MuiSelect-select": {
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    paddingTop: 0,
+                    paddingBottom: 0,
+                  },
+                }}
                 value={filters.status}
                 onChange={(e) =>
                   setFilters((c) => ({ ...c, status: e.target.value }))
@@ -217,6 +229,18 @@ export default function LeadsPage() {
                 select
                 fullWidth
                 label="Source"
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    height: 56,
+                  },
+                  "& .MuiSelect-select": {
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    paddingTop: 0,
+                    paddingBottom: 0,
+                  },
+                }}
                 value={filters.source}
                 onChange={(e) =>
                   setFilters((c) => ({ ...c, source: e.target.value }))

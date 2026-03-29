@@ -143,7 +143,19 @@ export default function UsersPage() {
               onChange={(event) =>
                 handleRoleSelection(params.row, event.target.value)
               }
-              sx={{ minWidth: 160 }}
+              sx={{
+                minWidth: 160,
+                "& .MuiOutlinedInput-root": {
+                  height: 39,
+                },
+                "& .MuiSelect-select": {
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  paddingTop: 0,
+                  paddingBottom: 0,
+                },
+              }}
             >
               {roles.map((role) => (
                 <MenuItem key={role} value={role}>

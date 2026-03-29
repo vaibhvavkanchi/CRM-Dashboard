@@ -2,6 +2,8 @@ import { alpha, createTheme } from "@mui/material/styles";
 
 const glassBorder = "1px solid rgba(255,255,255,0.18)";
 const glassBackground = "rgba(255,255,255,0.08)";
+const glassSelectBackground = "rgba(15, 23, 42, 0.4)";
+const glassMenuBackground = "rgba(15, 23, 42, 0.7)";
 
 const theme = createTheme({
   palette: {
@@ -111,9 +113,11 @@ const theme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          background: "rgba(255,255,255,0.06)",
+          background: glassSelectBackground,
           borderRadius: 14,
           transition: "all 0.3s ease",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
           "& fieldset": {
             borderColor: "rgba(255,255,255,0.14)",
           },
@@ -126,6 +130,54 @@ const theme = createTheme({
         },
         input: {
           color: "rgba(255,255,255,0.96)",
+        },
+      },
+    },
+    MuiSelect: {
+      styleOverrides: {
+        icon: {
+          color: "rgba(255,255,255,0.7)",
+        },
+        select: {
+          paddingTop: 8,
+          paddingBottom: 8,
+        },
+      },
+    },
+    MuiMenu: {
+      styleOverrides: {
+        paper: {
+          marginTop: 8,
+          borderRadius: 14,
+          background: glassMenuBackground,
+          border: "1px solid rgba(255,255,255,0.16)",
+          boxShadow: "0 20px 50px rgba(15, 23, 42, 0.45)",
+          backdropFilter: "blur(16px)",
+          WebkitBackdropFilter: "blur(16px)",
+          color: "rgba(255,255,255,0.9)",
+        },
+        list: {
+          paddingTop: 4,
+          paddingBottom: 4,
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          borderRadius: 10,
+          marginInline: 4,
+          marginBlock: 2,
+          textTransform: "capitalize",
+          "&.Mui-selected": {
+            backgroundColor: "rgba(255,255,255,0.18)",
+          },
+          "&.Mui-selected:hover": {
+            backgroundColor: "rgba(255,255,255,0.24)",
+          },
+          "&:hover": {
+            backgroundColor: "rgba(255,255,255,0.12)",
+          },
         },
       },
     },
